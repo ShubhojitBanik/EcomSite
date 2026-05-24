@@ -7,7 +7,7 @@ function Admin() {
 
     if(!token){
 
-        window.location.href = "/login";
+        window.location.href = "/#/login";
 
     }
 
