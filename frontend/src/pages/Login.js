@@ -17,7 +17,7 @@ function Login() {
 
             const res = await axios.post(
 
-                "http://localhost:5000/api/admin/login",
+                "https://ujtrading-backend.onrender.com/api/admin/login",
 
                 {
                     username,
@@ -38,6 +38,8 @@ function Login() {
         } catch(err) {
 
             alert("Wrong Credentials");
+
+            console.log(err);
 
         }
 

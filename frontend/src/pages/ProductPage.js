@@ -16,7 +16,9 @@ function ProductPage() {
     useEffect(()=>{
 
         axios.get(
-            "http://localhost:5000/api/products"
+
+            "https://ujtrading-backend.onrender.com/api/products"
+
         )
 
         .then((res)=>{
@@ -45,7 +47,7 @@ function ProductPage() {
 
             await axios.post(
 
-                "http://localhost:5000/api/orders",
+                "https://ujtrading-backend.onrender.com/api/orders",
 
                 {
                     product:product.name,

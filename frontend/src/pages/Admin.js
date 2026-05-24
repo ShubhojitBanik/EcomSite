@@ -3,8 +3,6 @@ import axios from "axios";
 
 function Admin() {
 
-    // CHECK TOKEN
-
     const token = localStorage.getItem("token");
 
     if(!token){
@@ -29,7 +27,7 @@ function Admin() {
         try {
 
             const res = await axios.get(
-                "http://localhost:5000/api/products"
+                "https://ujtrading-backend.onrender.com/api/products"
             );
 
             setProducts(res.data);
@@ -68,7 +66,7 @@ function Admin() {
 
             await axios.post(
 
-                "http://localhost:5000/api/products",
+                "https://ujtrading-backend.onrender.com/api/products",
 
                 formData,
 
@@ -112,7 +110,7 @@ function Admin() {
 
             await axios.delete(
 
-                `http://localhost:5000/api/products/${id}`,
+                `https://ujtrading-backend.onrender.com/api/products/${id}`,
 
                 {
 
@@ -145,7 +143,7 @@ function Admin() {
 
         axios.get(
 
-            "http://localhost:5000/api/orders",
+            "https://ujtrading-backend.onrender.com/api/orders",
 
             {
 
@@ -189,8 +187,6 @@ function Admin() {
 
             </h1>
 
-            {/* FORM */}
-
             <form onSubmit={addProduct}>
 
                 <input
@@ -214,8 +210,6 @@ function Admin() {
                     marginBottom:"10px"
                 }}
                 />
-
-                {/* IMAGE FILE */}
 
                 <input
                 type="file"
@@ -259,8 +253,6 @@ function Admin() {
                 margin:"50px 0"
             }}
             />
-
-            {/* PRODUCTS */}
 
             <h1>
 
@@ -336,8 +328,6 @@ function Admin() {
                 margin:"50px 0"
             }}
             />
-
-            {/* ORDERS */}
 
             <h1>
 

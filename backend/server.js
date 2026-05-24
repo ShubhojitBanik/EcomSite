@@ -254,7 +254,7 @@ app.post(
                 description:req.body.description,
 
                 image:
-                `http://localhost:5000/uploads/${req.file.filename}`
+                `https://ujtrading-backend.onrender.com/uploads/${req.file.filename}`
 
             });
 
