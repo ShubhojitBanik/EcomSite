@@ -48,14 +48,7 @@ function Navbar() {
 
                 </Link>
 
-                <Link
-                to="/admin"
-                style={linkStyle}
-                >
-
-                    Admin
-
-                </Link>
+                
 
             </div>
 

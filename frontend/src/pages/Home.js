@@ -11,35 +11,78 @@ function Home() {
         }}
         >
 
-            {/* HERO */}
+            {/* HERO SECTION */}
 
             <div
             style={{
-                padding:"100px 20px",
-                textAlign:"center",
+                minHeight:"55vh",
+                display:"flex",
+                flexDirection:"column",
+                justifyContent:"center",
+                alignItems:"center",
                 background:
-                "linear-gradient(to right,#dbeafe,#f0f9ff,#fae8ff)"
+                "linear-gradient(135deg,#eef2ff,#f8fafc,#fdf2f8)",
+                borderRadius:"0 0 40px 40px",
+                padding:"40px 20px",
+                position:"relative",
+                overflow:"hidden"
             }}
             >
 
+                {/* GLOW EFFECTS */}
+
+                <div
+                style={{
+                    width:"300px",
+                    height:"300px",
+                    background:"#818cf8",
+                    opacity:"0.15",
+                    borderRadius:"50%",
+                    position:"absolute",
+                    top:"-100px",
+                    left:"-100px",
+                    filter:"blur(80px)",
+                    animation:"float 6s ease-in-out infinite"
+                }}
+                />
+
+                <div
+                style={{
+                    width:"250px",
+                    height:"250px",
+                    background:"#c084fc",
+                    opacity:"0.15",
+                    borderRadius:"50%",
+                    position:"absolute",
+                    bottom:"-80px",
+                    right:"-80px",
+                    filter:"blur(80px)",
+                    animation:"float2 8s ease-in-out infinite"
+                }}
+                />
+
                 <h1
                 style={{
-                    fontSize:"70px",
+                    fontSize:"80px",
+                    fontWeight:"800",
                     color:"#0f172a",
-                    marginBottom:"20px"
+                    marginBottom:"10px",
+                    zIndex:"2",
+                    animation:"fadeUp 1s ease"
                 }}
                 >
 
                     UJ TRADING
-                    
 
                 </h1>
 
                 <p
                 style={{
-                    fontSize:"22px",
+                    fontSize:"26px",
                     color:"#475569",
-                    marginBottom:"30px"
+                    marginBottom:"35px",
+                    zIndex:"2",
+                    animation:"fadeUp 1.3s ease"
                 }}
                 >
 
@@ -49,21 +92,106 @@ function Home() {
 
                 <button
                 style={{
-                    padding:"14px 40px",
+                    padding:"18px 45px",
                     border:"none",
-                    borderRadius:"50px",
-                    background:"#6366f1",
+                    borderRadius:"999px",
+                    background:
+                    "linear-gradient(135deg,#6366f1,#8b5cf6)",
                     color:"white",
                     fontSize:"18px",
+                    fontWeight:"600",
                     cursor:"pointer",
                     boxShadow:
-                    "0 10px 30px rgba(99,102,241,0.3)"
+                    "0 10px 30px rgba(99,102,241,0.35)",
+                    transition:"0.3s",
+                    zIndex:"2",
+                    animation:"fadeUp 1.6s ease"
+                }}
+                onMouseOver={(e)=>{
+
+                    e.target.style.transform =
+                    "translateY(-4px) scale(1.03)";
+
+                }}
+                onMouseOut={(e)=>{
+
+                    e.target.style.transform =
+                    "translateY(0px)";
+
                 }}
                 >
 
                     Explore Products
 
                 </button>
+
+                {/* ANIMATIONS */}
+
+                <style>{`
+
+                    @keyframes fadeUp {
+
+                        from {
+
+                            opacity:0;
+                            transform:translateY(40px);
+
+                        }
+
+                        to {
+
+                            opacity:1;
+                            transform:translateY(0);
+
+                        }
+
+                    }
+
+                    @keyframes float {
+
+                        0% {
+
+                            transform:translateY(0px);
+
+                        }
+
+                        50% {
+
+                            transform:translateY(20px);
+
+                        }
+
+                        100% {
+
+                            transform:translateY(0px);
+
+                        }
+
+                    }
+
+                    @keyframes float2 {
+
+                        0% {
+
+                            transform:translateY(0px);
+
+                        }
+
+                        50% {
+
+                            transform:translateY(-20px);
+
+                        }
+
+                        100% {
+
+                            transform:translateY(0px);
+
+                        }
+
+                    }
+
+                `}</style>
 
             </div>
 
@@ -141,7 +269,11 @@ const tagStyle = {
     color:"#334155",
 
     boxShadow:
-    "0 5px 20px rgba(0,0,0,0.06)"
+    "0 5px 20px rgba(0,0,0,0.06)",
+
+    transition:"0.3s",
+
+    cursor:"pointer"
 
 };
 
